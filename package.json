@@ -1,0 +1,16 @@
+{
+  "name": "beginners-a11y",
+  "version": "1.0.0",
+  "description": "The project for \"A Beginner's Guide to Web Accessibility\" on Tuts+",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Hartley <johnbhartley@gmail.com> (http://www.johnbhartley.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0"
+  }
+}

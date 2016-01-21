@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Links</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../public/css/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body class="scripting">
+  
+  <div class="big-wrap">
+    <h1>Accessible JavaScript</h1>
+    
+    <main id="main">
+      <div class="output"></div>
+      <button class="click">Click Button</button>
+
+      <button class="key">click/keypress</button>
+      <button class="keydown">keydown</button>
+      <button class="keyup">keyup</button>
+      
+      <h2>Talking about Focus</h2>
+      <button class="focus">focusin</button>
+      <button class="givefocus">.focus()</button>
+      <button class="losefocus">.blur()</button>
+    </main>
+
+</div>
+
+
+<script>
+  $('.click').on('click', function (e) {
+    e.preventDefault();
+    console.log(e);
+    $('.output').text('You Clicked');
+  });
+
+  $('.key').on('click keypress', function (e) {
+    e.preventDefault();
+    if(e.type === 'keypress' && e.which === 13) {
+      console.log('you pressed the enter key');
+    }
+
+    if(e.type === 'click') {
+      $('.output').text('You Clicked');
+    }
+
+    if(e.type === 'keypress') {
+      $('.output').text('You Pressed keycode: ' + e.which );
+    }
+  });
+
+  $('.focus').on('mouseover focusin', function (e) {
+    console.log(e);
+    var type;
+    if(e.type === 'mouseover') {
+      type = 'Mouse';
+    } else if (e.type === 'focusin') {
+      type = 'Focus';
+    }
+    $('.output').text(type + ' In');
+  });
+
+  $('.focus').on('mouseout focusout', function (e) {
+    console.log(e);
+    var type;
+    if(e.type === 'mouseout') {
+      type = 'Mouse';
+    } else if (e.type === 'focusout') {
+      type = 'Focus';
+    }
+    $('.output').text(type + ' Out');
+  });
+
+
+  $('.keydown').on('click keydown', function (e) {
+    if(e.which != 9) {
+      e.preventDefault();
+
+      if(e.type === 'click') {
+        $('.output').text('You Clicked');
+      }
+
+      if(e.type === 'keydown') {
+        $('.output').text('You Pressed keycode: ' + e.which );
+      }
+    }
+  });
+
+  $('.keyup').on('click keyup', function (e) {
+    e.preventDefault();
+
+    if(e.type === 'click') {
+      $('.output').text('You Clicked');
+    }
+
+    if(e.type === 'keyup') {
+      $('.output').text('You Pressed keycode: ' + e.which );
+    }
+  });
+
+  $('.givefocus').on('click keypress', function (e) {
+    e.preventDefault();
+    $('.click').focus();
+  });
+
+  $('.losefocus').on('click keypress', function (e) {
+    e.preventDefault();
+    $(this).blur();
+  });
+</script>
+
+</body>
+</html>

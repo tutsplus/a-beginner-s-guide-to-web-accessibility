@@ -1,0 +1,150 @@
+.blocks {
+
+  .basic {
+      display: block;
+      position: absolute;
+      top: -1000px;
+      left: -1000px;
+
+      &:focus {
+        top: 0;
+        left: 0;
+      }
+  }
+
+
+  .header__skip {
+    background: #2084b8;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    height: 50px;
+    line-height: 40px;
+    margin-top: -80px;
+    overflow: hidden;
+    padding: 5px 0;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    -webkit-transition: margin-top 0.2s ease-in-out;
+    transition: margin-top 0.2s ease-in-out;
+  }
+
+  .header__skip:focus {
+    color: #fff;
+    margin-top: 0;
+  }
+
+
+  .skip-nav-link {
+    position: absolute;
+    top: 0;
+    left: -10000px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .skip-nav-link:focus {
+    height: 20px;
+    width: 200px;
+    outline: 1px solid #c9c9c9;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 100;
+    text-align: center;
+    background: #fff;
+  }
+
+  // 3.6-nav
+  nav.bad {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      position: relative;
+      ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: -3px;
+        background: #f2f3f4;
+        width: 150px;
+        padding: 3px;
+        li {
+          display: block;
+          line-height: 24px;
+        }
+
+      }
+
+      a {
+        display: block;
+        padding: 10px;
+      }
+
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+  nav.good {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      position: relative;
+      ul {
+        position: absolute;
+        top: 100%;
+        left: -1000px;
+        height: 0;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+        top: 100%;
+        left: -3px;
+        background: #f2f3f4;
+        width: 150px;
+        height: 0;
+
+        li {
+          display: block;
+        }
+
+        &.show {
+          height: auto;
+          padding: 3px;
+        }
+
+      }
+
+      &:hover ul, a:focus + ul {
+        height: auto;
+        padding: 3px;
+      }
+
+      a {
+        display: block;
+        padding: 10px;
+        line-height: 24px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Links</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../public/css/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body class="blocks">
+
+<a href="#main" class="basic">Skip to Content</a>
+<a href="#nav" class="skip-nav-link skip-to-main">Skip To Main Navigation</a>
+  
+  <div class="little-wrap">
+    <h1>Accessible Navigation</h1>
+    
+    <nav id="nav" class="good">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a>
+          <ul class="submenu">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Staff</a></li>
+            <li><a href="#">Our Building</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Products</a>
+          <ul class="submenu">
+            <li><a href="#">Beef Jerky</a></li>
+            <li><a href="#">Turkey Jerky</a></li>
+            <li><a href="#">Perky Jerky</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis rem veritatis vero eum nulla deleniti maxime ut aliquam, itaque at dolorem! Consequuntur est libero, tempore quibusdam minima debitis officia repellendus.</p>
+      <p>A debitis odit natus mollitia nesciunt labore ex temporibus explicabo iusto, impedit architecto beatae iure cumque neque, modi ea voluptatum nam excepturi laboriosam sint, nostrum. In illo pariatur dolore odit.</p>
+      <p>Praesentium ipsa voluptatibus eligendi. Aliquid perferendis, facilis voluptas amet quia quam veniam omnis illo, quisquam ullam veritatis quibusdam repellendus quidem, voluptatem nihil esse excepturi. Placeat earum ratione cupiditate. Cupiditate, delectus!</p>
+      <p>Earum quod error rerum quia fuga nisi laborum, adipisci expedita ut aliquid deleniti fugit tenetur magnam vitae culpa numquam ab corrupti dolores nam quae libero excepturi assumenda asperiores, laboriosam. Expedita!</p>
+      <p>Error libero dignissimos sunt, officiis ducimus illum consequatur nesciunt recusandae natus, eveniet rerum vel ad iste quis, ex eligendi qui animi, magni sed molestias labore dicta voluptatem. Delectus, enim qui.</p>
+      <a href="#">This should get focus after skipping to content and tabbing again</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis rem veritatis vero eum nulla deleniti maxime ut aliquam, itaque at dolorem! Consequuntur est libero, tempore quibusdam minima debitis officia repellendus.</p>
+      <p>A debitis odit natus mollitia nesciunt labore ex temporibus explicabo iusto, impedit architecto beatae iure cumque neque, modi ea voluptatum nam excepturi laboriosam sint, nostrum. In illo pariatur dolore odit.</p>
+      <p>Praesentium ipsa voluptatibus eligendi. Aliquid perferendis, facilis voluptas amet quia quam veniam omnis illo, quisquam ullam veritatis quibusdam repellendus quidem, voluptatem nihil esse excepturi. Placeat earum ratione cupiditate. Cupiditate, delectus!</p>
+      <p>Earum quod error rerum quia fuga nisi laborum, adipisci expedita ut aliquid deleniti fugit tenetur magnam vitae culpa numquam ab corrupti dolores nam quae libero excepturi assumenda asperiores, laboriosam. Expedita!</p>
+      <p>Error libero dignissimos sunt, officiis ducimus illum consequatur nesciunt recusandae natus, eveniet rerum vel ad iste quis, ex eligendi qui animi, magni sed molestias labore dicta voluptatem. Delectus, enim qui.</p>
+
+</div>
+
+
+<script>
+  var alink = $('a');
+  $(alink).focusin(function () {
+    var ul = $(this).closest('ul');
+    if($(ul).hasClass('submenu')) {
+      ul.addClass('show');
+    } else {
+      $('ul').removeClass('show');
+    }
+  });
+</script>
+
+</body>
+</html>

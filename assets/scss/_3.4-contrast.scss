@@ -1,0 +1,25 @@
+.contrast {
+  text-align: center;
+  line-height: 30px;
+  span {
+    display: block;
+    font-size: 16px;
+  }
+
+  .major-fail {
+    color: #eee;
+  }
+  .big-fail {
+    color: #bababa;
+  }
+  .fail {
+    color: #7e7e7e;
+    &.large {
+      font-size: 24px;
+    }
+    &.bold {
+      font-weight: bold;
+      font-size: 19px;
+    }
+  }
+}

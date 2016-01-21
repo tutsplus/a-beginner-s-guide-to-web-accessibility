@@ -1,0 +1,323 @@
+html {
+  font-size: 100%; }
+
+body {
+  font-family: sans-serif;
+  background: #f2f3f4;
+  color: #373d3f;
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  color: #107896; }
+
+h1 {
+  margin-bottom: 2em; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.little-wrap, .big-wrap {
+  max-width: 80%;
+  margin: 2em auto; }
+
+.sr-only, .visually-hidden, .vh, .readable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  border: 0; }
+
+.nope {
+  text-decoration: linethrough; }
+
+.code {
+  background: #fff;
+  text-align: left;
+  line-height: 26px;
+  width: 100%;
+  font-family: courier, serif;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc; }
+
+.clear {
+  clear: both; }
+
+@media (min-width: 769px) {
+  .little-wrap {
+    max-width: 40%;
+    margin: 2em auto; } }
+
+.links .little-wrap div {
+  margin-bottom: 4em; }
+
+.links h2 {
+  margin-bottom: 0; }
+
+.links .never-use a {
+  display: block;
+  margin-bottom: .5em; }
+  .links .never-use a.social {
+    display: inline-block; }
+
+.links p {
+  line-height: 1.5em; }
+
+.links .caps {
+  text-transform: uppercase; }
+
+.links i {
+  font-size: 32px;
+  margin-right: 20px; }
+
+.images .little-wrap div {
+  margin-bottom: 4em; }
+
+.images h2 {
+  margin-bottom: 0; }
+
+.images p {
+  line-height: 1.5em; }
+
+.headings h1, .headings .h1 {
+  font-size: 3em; }
+
+.headings h4, .headings .h4 {
+  font-size: 1em;
+  text-transform: uppercase; }
+
+.contrast {
+  text-align: center;
+  line-height: 30px; }
+  .contrast span {
+    display: block;
+    font-size: 16px; }
+  .contrast .major-fail {
+    color: #eee; }
+  .contrast .big-fail {
+    color: #bababa; }
+  .contrast .fail {
+    color: #7e7e7e; }
+    .contrast .fail.large {
+      font-size: 24px; }
+    .contrast .fail.bold {
+      font-weight: bold;
+      font-size: 19px; }
+
+.focus h2 {
+  margin-top: 100px; }
+
+.focus ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .focus ul li {
+    padding: 0;
+    display: inline-block;
+    margin: 0 10px 10px; }
+
+.focus div {
+  text-align: center; }
+
+.focus .link:focus {
+  outline: 10px solid green; }
+
+.focus .button:focus {
+  outline: 5px solid blue; }
+
+.focus a, .focus button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px; }
+
+.focus .no-outline {
+  outline: none; }
+
+.focus input, .focus button {
+  box-sizing: border-box;
+  margin: 0 0 30px;
+  height: 30px;
+  border: 1px solid #ccc; }
+
+.focus input {
+  width: 75%;
+  float: left; }
+
+.focus button {
+  width: 25%;
+  float: right;
+  background: #888;
+  color: #fff;
+  border: 1px solid #888;
+  cursor: pointer; }
+  .focus button:hover {
+    background: #333; }
+
+.focus .hover-focus button:hover, .focus .hover-focus button:focus {
+  background: #333; }
+
+.focus .header {
+  max-width: 1000px;
+  margin: 30px auto; }
+
+.focus .bad-header {
+  margin: 200px auto 100px; }
+  .focus .bad-header a.logo, .focus .bad-header button, .focus .bad-header ul {
+    float: left;
+    margin: 0; }
+  .focus .bad-header a {
+    margin-top: 15px; }
+  .focus .bad-header p, .focus .bad-header li {
+    float: right; }
+  .focus .bad-header button {
+    width: auto;
+    margin-top: 10px; }
+
+.focus .good-header {
+  margin: 100px auto; }
+  .focus .good-header a.logo, .focus .good-header ul, .focus .good-header button {
+    float: left;
+    margin: 0; }
+  .focus .good-header a {
+    margin-top: 15px; }
+  .focus .good-header li {
+    float: left; }
+  .focus .good-header p {
+    text-align: right; }
+  .focus .good-header button {
+    width: auto;
+    margin-top: 10px; }
+
+.blocks .basic {
+  display: block;
+  position: absolute;
+  top: -1000px;
+  left: -1000px; }
+  .blocks .basic:focus {
+    top: 0;
+    left: 0; }
+
+.blocks .header__skip {
+  background: #2084b8;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  height: 50px;
+  line-height: 40px;
+  margin-top: -80px;
+  overflow: hidden;
+  padding: 5px 0;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out; }
+
+.blocks .header__skip:focus {
+  color: #fff;
+  margin-top: 0; }
+
+.blocks .skip-nav-link {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.blocks .skip-nav-link:focus {
+  height: 20px;
+  width: 200px;
+  outline: 1px solid #c9c9c9;
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 100;
+  text-align: center;
+  background: #fff; }
+
+.blocks nav.bad ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.blocks nav.bad li {
+  display: inline-block;
+  position: relative; }
+  .blocks nav.bad li ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: -3px;
+    background: #f2f3f4;
+    width: 150px;
+    padding: 3px; }
+    .blocks nav.bad li ul li {
+      display: block;
+      line-height: 24px; }
+  .blocks nav.bad li a {
+    display: block;
+    padding: 10px; }
+  .blocks nav.bad li:hover ul {
+    display: block; }
+
+.blocks nav.good ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.blocks nav.good li {
+  display: inline-block;
+  position: relative; }
+  .blocks nav.good li ul {
+    position: absolute;
+    top: 100%;
+    left: -1000px;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    left: -3px;
+    background: #f2f3f4;
+    width: 150px;
+    height: 0; }
+    .blocks nav.good li ul li {
+      display: block; }
+    .blocks nav.good li ul.show {
+      height: auto;
+      padding: 3px; }
+  .blocks nav.good li:hover ul, .blocks nav.good li a:focus + ul {
+    height: auto;
+    padding: 3px; }
+  .blocks nav.good li a {
+    display: block;
+    padding: 10px;
+    line-height: 24px; }
+
+.scripting {
+  text-align: center; }
+  .scripting .output {
+    height: 30px; }
+  .scripting button {
+    width: 30%;
+    margin: 10px 1%;
+    padding: 10px 0;
+    font-size: 20px;
+    background: #666;
+    color: #fff;
+    font-weight: 700;
+    border: 0; }
+    .scripting button:focus, .scripting button:hover {
+      background: #444; }
+  .scripting h2 {
+    margin-top: 100px; }

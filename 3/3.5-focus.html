@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Links</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../public/css/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body class="focus">
+  <div class="little-wrap">
+    <h1>Focus Visible and Tab Order</h1>
+    <p class="code">
+      a { outline: none; }<br />
+      a { outline: 0; }<br />
+      *:focus { outline: 0; }
+    </p>
+    <ul>
+      <li><a href="http://buzzfeed.com" class="no-outline">Buzzfeed - uses 'outline: none;'</a></li>
+      <li><a href="http://cota.com">Cota.com - several focus designs</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li class="padding"><a href="#">Link 2</a></li>
+      <li><a href="#" class="link">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+    </ul>
+    <h2>Inputs and Buttons</h2>
+    <form>
+      <label for="input-focus">Example Input with :hover</label><br />
+      <input id="input-focus" type="text">
+      <button>Submit</button>
+    </form>
+
+    <form class="hover-focus">
+      <label for="input-focus">Example Input with :hover and :focus</label><br />
+      <input id="input-focus" type="text">
+      <button>Submit</button>
+    </form>
+
+    <!-- never use tabindex greater than 0 -->
+    <h2>Using tabindex="1" and greater</h2>
+    <div class="focusable">
+      <p>This content never gets focus</p>
+    </div>   
+    <div class="focusable" tabindex="32500">
+      <p>This content can ALSO get focus</p>
+    </div>   
+    <div class="focusable" tabindex="1">
+      <p>But this is the first thing to get focus</p>
+    </div>    
+    <div class="focusable" tabindex="5">
+      <p>Then we hop down here for reasons</p>
+    </div>    
+    <br /><br />
+
+
+
+    <h2>Focusing with JavaScript</h2>
+    <p class="code">
+      $('.thing').on('click', function () {<br />
+      &nbsp;&nbsp;$('#no-tab').focus();<br />
+      });
+    </p>
+  </div>
+
+  <div class="header bad-header">
+    <a href="#" class="logo"><img src="http://placehold.it/200x50" alt="The most magical logo of all time"></a>
+    <p tabindex="0">Columbus, Ohio - Snowing 6&deg; F</p>
+    <ul>
+      <li><a href="">Menu</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Photos</a></li>
+    </ul>
+    <button>Sign In</button>
+    <div class="clear"></div>
+  </div>
+
+  <div class="header good-header">
+    <a href="#" class="logo"><img src="http://placehold.it/200x50" alt="The most magical logo of all time"></a>
+    <ul>
+      <li><a href="">Photos</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Menu</a></li>
+    </ul>
+    
+    <button>Sign In</button>
+    <p tabindex="0">Columbus, Ohio - Snowing 6&deg; F</p>
+    <div class="clear"></div>
+  </div>
+
+
+
+
+</body>
+</html>

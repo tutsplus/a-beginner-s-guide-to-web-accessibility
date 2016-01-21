@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessible Links</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../public/css/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body class="links">
+  <div class="little-wrap">
+    <h1>Accessible Links</h1>
+    <div id="generic-links">
+      <h2>Links in text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi autem delectus quo animi! Repudiandae exercitationem id fuga a, eaque eius, consectetur quo magnam, impedit ex temporibus praesentium to learn how to create Lorem Ipsum, <a href="#">follow this lorem ipsum tutorial</a>!
+      </p>
+      <p>
+      <p class="never-use"><strong>Never use:</strong><br>
+        <a href="#">Read More</a>
+        <a href="#">ALL CAPS</a>
+        <a href="#" class="caps">text-transform: uppercase; hey john, test this</a>
+        <a href="#">http://www.mycoolurl.com</a>
+        <a href="http://www.twitter.com/johnbhartley" class="social"><i class="fa fa-twitter"></i></a>
+
+
+        <a href="http://www.facebook.com" class="social"><span class="readable">Like John's Jerky Hut on Facebook</span><i class="fa fa-facebook"></i></a>
+        
+
+        <a href="#" title="Using the title is not a good idea">Title Attribute</a>
+        <a href="#" target="_blank">target="_blank"</a>
+        <a href="#" class="toggle">A link that triggers a JavaScript event</a>
+      </p>
+    </div>
+
+    <div id="phone-numbers">
+      <h2>Links as phone numbers</h2>
+      <p class="phone-number">
+        <a href="tel:18005555555">1-800-555-5555</a><br />
+        <a href="tel:18005555555"><span class="vh">For more information on jerky, call John at</span> 1-800-555-5555</a>
+      </p>
+    </div>
+
+    <div id="aria-label">
+      <h2>Link and ARIA</h2>
+      <p>
+        <a href="#" aria-label="This will download the PDF directly to your computer">More Details...</a>
+        
+        <h3 id="headline">Storms hit east coast</h3>
+        <p>Torrential rain and gale force winds have struck the east coast, causing flooding in many coastal towns.
+        <a id="p123" href="news.html" aria-labelledby="p123 headline">Read more...</a></p>
+      </p>
+    </div>
+
+    <div id="more-reading">
+      <ul>
+        <li><a href="http://a11yproject.com/posts/title-attributes/">a11y Project - Title Attributes</a></li>
+        <li><a href="https://www.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Steve Faulkner - Using the HTML title attribute</a></li>
+        <li><a href="http://diveintoaccessibility.info/day_16_not_opening_new_windows.html">Dive into Accessibility - Not opening new Windows</a></li>
+        <li><a href="http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/ARIA8.html">WCAG - Using aria-labelledby</a></li>
+        <li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">WCAG - Understanding 2.4.4</a></li>
+      </ul>
+    </div>  
+  </div>
+
+<script>
+
+</script>
+
+</body>
+</html>

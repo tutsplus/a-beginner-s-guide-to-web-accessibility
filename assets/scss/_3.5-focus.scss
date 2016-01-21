@@ -1,0 +1,117 @@
+.focus {
+  h2 {
+  margin-top: 100px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0;
+      display: inline-block;
+      margin: 0 10px 10px;
+    }
+  }
+  div { 
+    text-align: center; 
+  }
+
+  //:focus { outline: 3px solid red; }
+  
+  .link:focus {
+    outline: 10px solid green; 
+  }
+  
+  .button:focus {
+    outline: 5px solid blue; 
+  }
+  
+  a, button {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .no-outline {
+    outline: none;
+  }
+
+  input, button {
+    box-sizing: border-box;
+    margin: 0 0 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+  }
+
+  input {
+    width: 75%;
+    float: left;
+  }
+
+  button {
+    width: 25%;
+    float: right;
+    background: #888;
+    color: #fff;
+    border: 1px solid #888;
+    cursor: pointer;
+    &:hover {
+      background: #333;
+    }
+  }
+
+  .hover-focus button {
+    &:hover, &:focus {
+      background: #333;
+    }
+  }
+
+  .header {
+    max-width: 1000px;
+    margin: 30px auto;
+  }
+
+  .bad-header {
+    margin: 200px auto 100px;
+    a.logo, button, ul { 
+      float: left;
+      margin: 0;
+    }
+
+    a {
+      margin-top: 15px;
+    }
+  
+    p, li {
+      float: right;
+    }
+    button {
+      width: auto;
+      margin-top: 10px;
+    }
+  }
+
+  .good-header {
+    margin: 100px auto;
+    a.logo, ul, button { 
+      float: left;
+      margin: 0;
+    }
+
+    a {
+      margin-top: 15px;
+    }
+
+    li {
+      float: left;
+    }
+    p {
+    text-align: right;
+    }
+
+    button {
+      width: auto;
+      margin-top: 10px;
+    }
+  }
+}

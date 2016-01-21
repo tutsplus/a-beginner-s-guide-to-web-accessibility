@@ -1,0 +1,25 @@
+.scripting {
+  text-align: center;
+
+  .output {
+    height: 30px;
+  }
+
+  button {
+    width: 30%;
+    margin: 10px 1%;
+    padding: 10px 0;
+    font-size: 20px;
+    background: #666;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    &:focus, &:hover {
+      background: #444;
+    }
+  }
+
+  h2 {
+    margin-top: 100px;
+  }
+}

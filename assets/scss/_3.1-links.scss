@@ -1,0 +1,32 @@
+.links {
+  .little-wrap div {
+    margin-bottom: 4em;
+  }
+  
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .never-use a {
+    display: block;
+    margin-bottom: .5em;
+    &.social {
+      display: inline-block;
+    }
+  }
+
+  
+  
+  p {
+    line-height: 1.5em;
+  }
+
+  .caps {
+    text-transform: uppercase;
+  }
+
+  i {
+    font-size: 32px;
+    margin-right: 20px;
+  }
+}
